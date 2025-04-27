@@ -24,12 +24,32 @@ function App() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#005CFF] to-[#1F1F1F] relative overflow-hidden">
+    <main className="min-h-screen flex items-center justify-center bg-gray-900 relative overflow-hidden">
+      {/* Blue gradient balls */}
+      <div
+        className="absolute top-0 right-0 w-72 h-72 rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(50% 50% at 50% 50%, #005CFF 0%, rgba(0, 0, 0, 0) 100%)",
+          transform: "translate(50%, -50%)",
+          zIndex: 0,
+        }}
+      />
+      <div
+        className="absolute bottom-0 left-0 w-72 h-72 rounded-full pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(50% 50% at 50% 50%, #005CFF 0%, rgba(0, 0, 0, 0) 100%)",
+          transform: "translate(-50%, 50%)",
+          zIndex: 0,
+        }}
+      />
+
       {/* Container preto */}
-      <div className="bg-black w-[1156px] h-[537px] rounded-xl flex flex-col items-center p-10 gap-8 relative">
+      <div className="bg-black w-[1156px] h-[537px] rounded-xl flex flex-col items-center p-10 gap-8 relative z-10">
         {/* Logo + título */}
         <div className="flex items-center gap-4">
-        <img src={GitHub} alt="GitHub" className="w-12 h-12" />
+          <img src={GitHub} alt="GitHub" className="w-12 h-12" />
           <h1 className="text-3xl md:text-5xl font-bold text-white">
             Perfil <span className="text-white-500">GitHub</span>
           </h1>
