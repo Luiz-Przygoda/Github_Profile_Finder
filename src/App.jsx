@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import UserCard from "./components/UserCard";
 import ErrorMessage from "./components/ErrorMessage";
+import GitHub from "./assets/GithubICON.png"; // Ensure the path is correct
 
 
 
@@ -28,7 +29,7 @@ function App() {
       <div className="bg-black w-[1156px] h-[537px] rounded-xl flex flex-col items-center p-10 gap-8 relative">
         {/* Logo + título */}
         <div className="flex items-center gap-4">
-          <img src="/GithubICON.png" alt="GitHub Logo" className="w-12 h-12" />
+        <img src={GitHub} alt="GitHub" className="w-12 h-12" />
           <h1 className="text-3xl md:text-5xl font-bold text-white">
             Perfil <span className="text-white-500">GitHub</span>
           </h1>
